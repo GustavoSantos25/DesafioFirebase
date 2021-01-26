@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.desafiofirebase.ui.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_cadastroFragment"
+            app:destination="@id/cadastroFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cadastroFragment"
+        android:name="com.example.desafiofirebase.ui.CadastroFragment"
+        android:label="fragment_cadastro"
+        tools:layout="@layout/fragment_cadastro" >
+        <action
+            android:id="@+id/action_cadastroFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_cadastroFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.desafiofirebase.ui.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_detailGamesFragment"
+            app:destination="@id/detailGamesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_gameCreatorFragment"
+            app:destination="@id/gameCreatorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailGamesFragment"
+        android:name="com.example.desafiofirebase.ui.DetailGamesFragment"
+        android:label="fragment_detail_games"
+        tools:layout="@layout/fragment_detail_games" >
+        <action
+            android:id="@+id/action_detailGamesFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_detailGamesFragment_to_gameCreatorFragment"
+            app:destination="@id/gameCreatorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameCreatorFragment"
+        android:name="com.example.desafiofirebase.ui.GameCreatorFragment"
+        android:label="fragment_game_creator"
+        tools:layout="@layout/fragment_game_creator" >
+        <action
+            android:id="@+id/action_gameCreatorFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+</navigation>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.CadastroFragment">
+
+    <ImageView
+        android:id="@+id/iv_fundo_login"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/img_splash"
+        android:scaleType="fitXY"/>
+
+    <LinearLayout
+        android:layout_width="330dp"
+        android:layout_height="330dp"
+        android:background="@drawable/login_body_shape"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <EditText
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/verde_text"
+            android:hint="@string/hint_name"/>
+
+        <EditText
+            android:id="@+id/edEmailCadastro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_email"
+            android:textColor="@color/verde_text"
+            android:inputType="textEmailAddress"/>
+
+        <EditText
+            android:id="@+id/edPwdCadastro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_pwd"
+            android:textColor="@color/verde_text"
+            android:inputType="textPassword"/>
+
+
+        <EditText
+            android:id="@+id/edPwdRepCadastro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_pwdRep"
+            android:textColor="@color/verde_text"
+            android:inputType="textPassword"/>
+
+
+        <Button
+            android:id="@+id/btn_createAccount"
+            android:layout_marginTop="60dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/create_account"
+            android:backgroundTint="@color/laranja"/>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
